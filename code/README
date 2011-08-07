@@ -1,1 +1,70 @@
-This is where the project code goes
+import java.util.Scanner;
+
+
+public class main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int Home_Total = 0;
+		int Away_Total = 0;
+		int Home_Inning = 0;
+		int Away_Inning = 0;
+		int Hbag;
+		int Abag;
+		int Round = 0;
+		int Game = 0;
+		
+		while (Game <= 0){
+			
+			Home_Inning = 0;
+			Away_Inning = 0;
+			
+			for (int x = 1; x < 5;){
+				
+			    Scanner input = new Scanner (System.in);
+				System.out.println ("Enter a score for home bag " + x);
+				Hbag = input.nextInt(); 
+				Home_Inning = Hbag + Home_Inning;
+				
+				Scanner input2 = new Scanner (System.in);
+				System.out.println ("Enter a score for Away bag " + x);
+				Abag = input2.nextInt(); 
+				Away_Inning = Abag + Away_Inning;
+				
+				
+			x = x +1;
+		}
+			if (Home_Inning == Away_Inning)
+				System.out.println ("TIE");
+			else 
+				if (Home_Inning > Away_Inning)
+				Home_Total = Home_Total + Home_Inning - Away_Inning;
+				 	else
+			
+				 		Away_Total = Away_Total + Away_Inning;
+			
+			System.out.println ("Away Inning Scored " + Away_Inning + " Home Inning Total "+ Home_Inning);
+			System.out.println ("Away Curent Total " + Away_Total + " Home Curent Total "+ Home_Total);
+	
+			if (Home_Total == 21 || Away_Total == 21)
+		{System.out.println ("Game Over");
+		Game = 1;}
+		else
+			if (Home_Total > 21 )
+			{System.out.println ("Home is over 16");
+			Home_Total = 16;}
+				else
+					if (Away_Total > 21)
+					{System.out.println ("Away is over back to 16");
+					Away_Total = 16;}
+					else
+							System.out.println ("Away Total " + Away_Total + " Home Total "+ Home_Total);
+		
+		
+	}	
+}
+}
