@@ -4,4 +4,9 @@
     <string name="app_name">Cornscore</string>
     <string name="welcome_msg">Score your game of corn hole!</string>
     <string name="launch_button_text">Get started!</string>
+    <string name="start_game_button_text">Start!</string>
+    <style name="cornholieo">
+    	
+    	
+    </style>
 </resources>

@@ -11,14 +11,59 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int 2364corn=0x7f020000;
-        public static final int cornhole600x600=0x7f020001;
-        public static final int icon=0x7f020002;
+        public static final int cornhole600x600=0x7f020000;
+        public static final int gameboard=0x7f020001;
+        public static final int i2team=0x7f020002;
+        public static final int i3team=0x7f020003;
+        public static final int icon=0x7f020004;
+        public static final int iteam=0x7f020005;
+        public static final int m2team=0x7f020006;
+        public static final int mteam=0x7f020007;
+        public static final int nteam=0x7f020008;
+        public static final int nuteam=0x7f020009;
+        public static final int oteam=0x7f02000a;
+        public static final int p2team=0x7f02000b;
+        public static final int pteam=0x7f02000c;
+        public static final int select=0x7f02000d;
+        public static final int steam=0x7f02000e;
+        public static final int wteam=0x7f02000f;
     }
     public static final class id {
-        public static final int frameLayout1=0x7f050001;
-        public static final int launch_button=0x7f050002;
-        public static final int textView1=0x7f050000;
+        public static final int frameLayout1=0x7f060021;
+        public static final int horizontalScrollView1=0x7f060003;
+        public static final int horizontalScrollView2=0x7f060012;
+        public static final int i2team_away=0x7f06001b;
+        public static final int i2team_home=0x7f06000c;
+        public static final int i3team_away=0x7f06001c;
+        public static final int i3team_home=0x7f06000d;
+        public static final int iteam_away=0x7f06001d;
+        public static final int iteam_home=0x7f06000e;
+        public static final int launch_button=0x7f060022;
+        public static final int linearLayout1=0x7f060001;
+        public static final int linearLayout2=0x7f060004;
+        public static final int linearLayout3=0x7f060013;
+        public static final int m2team_away=0x7f06001e;
+        public static final int m2team_home=0x7f06000f;
+        public static final int mteam_away=0x7f06001f;
+        public static final int mteam_home=0x7f060010;
+        public static final int nteam_away=0x7f06001a;
+        public static final int nteam_home=0x7f06000b;
+        public static final int nuteam_away=0x7f060019;
+        public static final int nuteam_home=0x7f06000a;
+        public static final int oteam_away=0x7f060018;
+        public static final int oteam_home=0x7f060009;
+        public static final int p2team_away=0x7f060017;
+        public static final int p2team_home=0x7f060008;
+        public static final int pteam_away=0x7f060016;
+        public static final int pteam_home=0x7f060007;
+        public static final int relativeLayout1=0x7f060000;
+        public static final int start_game=0x7f060020;
+        public static final int steam_away=0x7f060015;
+        public static final int steam_home=0x7f060006;
+        public static final int textView1=0x7f060002;
+        public static final int textView2=0x7f060011;
+        public static final int wteam_away=0x7f060014;
+        public static final int wteam_home=0x7f060005;
     }
     public static final class layout {
         public static final int game_setup=0x7f030000;
@@ -29,6 +74,10 @@ public final class R {
         public static final int app_name=0x7f040001;
         public static final int hello=0x7f040000;
         public static final int launch_button_text=0x7f040003;
+        public static final int start_game_button_text=0x7f040004;
         public static final int welcome_msg=0x7f040002;
+    }
+    public static final class style {
+        public static final int cornholieo=0x7f050000;
     }
 }

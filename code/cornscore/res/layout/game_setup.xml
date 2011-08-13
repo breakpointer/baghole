@@ -3,7 +3,48 @@
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:orientation="vertical"
   android:layout_width="match_parent"
-  android:layout_height="match_parent">
-    <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:text="TextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/textView1"></TextView>
+  android:layout_height="match_parent" android:background="@drawable/cornhole600x600">
+    <RelativeLayout android:background="#33333333" android:layout_width="match_parent" android:id="@+id/relativeLayout1" android:layout_margin="20dip" android:layout_gravity="center" android:layout_height="match_parent" android:gravity="bottom">
+        <LinearLayout android:orientation="vertical" android:id="@+id/linearLayout1" android:layout_alignParentTop="true" android:layout_alignParentLeft="true" android:layout_height="match_parent" android:layout_width="match_parent" android:weightSum="1">
+            <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:text="Pick the home team colors" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/textView1"></TextView>
+            <HorizontalScrollView android:id="@+id/horizontalScrollView1" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:id="@+id/linearLayout2" android:layout_width="match_parent" android:orientation="horizontal" android:layout_height="wrap_content">
+                    <ImageButton android:layout_width="wrap_content" android:id="@+id/wteam_home" android:layout_height="wrap_content" android:src="@drawable/wteam"></ImageButton>
+                    <ImageButton android:layout_width="wrap_content" android:id="@+id/steam_home" android:layout_height="wrap_content" android:src="@drawable/steam"></ImageButton>
+                    <ImageButton android:layout_width="wrap_content" android:id="@+id/pteam_home" android:layout_height="wrap_content" android:src="@drawable/pteam"></ImageButton>
+                    <ImageButton android:layout_width="wrap_content" android:id="@+id/p2team_home" android:layout_height="wrap_content" android:src="@drawable/p2team"></ImageButton>
+                    <ImageButton android:layout_width="wrap_content" android:id="@+id/oteam_home" android:layout_height="wrap_content" android:src="@drawable/oteam"></ImageButton>
+                    <ImageButton android:layout_width="wrap_content" android:id="@+id/nuteam_home" android:layout_height="wrap_content" android:src="@drawable/nuteam"></ImageButton>
+                    <ImageButton android:layout_width="wrap_content" android:id="@+id/nteam_home" android:layout_height="wrap_content" android:src="@drawable/nteam"></ImageButton>
+                    <ImageButton android:layout_width="wrap_content" android:id="@+id/i2team_home" android:layout_height="wrap_content" android:src="@drawable/i2team"></ImageButton>
+                    <ImageButton android:layout_width="wrap_content" android:id="@+id/i3team_home" android:layout_height="wrap_content" android:src="@drawable/i3team"></ImageButton>
+                    <ImageButton android:layout_width="wrap_content" android:id="@+id/iteam_home" android:layout_height="wrap_content" android:src="@drawable/iteam"></ImageButton>
+                    <ImageButton android:layout_width="wrap_content" android:id="@+id/m2team_home" android:layout_height="wrap_content" android:src="@drawable/m2team"></ImageButton>
+                    <ImageButton android:layout_width="wrap_content" android:id="@+id/mteam_home" android:layout_height="wrap_content" android:src="@drawable/mteam"></ImageButton>
+                </LinearLayout>
+            </HorizontalScrollView>
+            <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:text="Pick the away team colors" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/textView2"></TextView>
+            <HorizontalScrollView android:id="@+id/horizontalScrollView2" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:id="@+id/linearLayout3" android:layout_width="match_parent" android:orientation="horizontal" android:layout_height="wrap_content">
+                	<ImageButton android:layout_width="wrap_content" android:id="@+id/wteam_away" android:layout_height="wrap_content" android:src="@drawable/wteam"></ImageButton>
+                    <ImageButton android:layout_width="wrap_content" android:id="@+id/steam_away" android:layout_height="wrap_content" android:src="@drawable/steam"></ImageButton>
+                    <ImageButton android:layout_width="wrap_content" android:id="@+id/pteam_away" android:layout_height="wrap_content" android:src="@drawable/pteam"></ImageButton>
+                    <ImageButton android:layout_width="wrap_content" android:id="@+id/p2team_away" android:layout_height="wrap_content" android:src="@drawable/p2team"></ImageButton>
+                    <ImageButton android:layout_width="wrap_content" android:id="@+id/oteam_away" android:layout_height="wrap_content" android:src="@drawable/oteam"></ImageButton>
+                    <ImageButton android:layout_width="wrap_content" android:id="@+id/nuteam_away" android:layout_height="wrap_content" android:src="@drawable/nuteam"></ImageButton>
+                    <ImageButton android:layout_width="wrap_content" android:id="@+id/nteam_away" android:layout_height="wrap_content" android:src="@drawable/nteam"></ImageButton>
+                    <ImageButton android:layout_width="wrap_content" android:id="@+id/i2team_away" android:layout_height="wrap_content" android:src="@drawable/i2team"></ImageButton>
+                    <ImageButton android:layout_width="wrap_content" android:id="@+id/i3team_away" android:layout_height="wrap_content" android:src="@drawable/i3team"></ImageButton>
+                    <ImageButton android:layout_width="wrap_content" android:id="@+id/iteam_away" android:layout_height="wrap_content" android:src="@drawable/iteam"></ImageButton>
+                    <ImageButton android:layout_width="wrap_content" android:id="@+id/m2team_away" android:layout_height="wrap_content" android:src="@drawable/m2team"></ImageButton>
+                    <ImageButton android:layout_width="wrap_content" android:id="@+id/mteam_away" android:layout_height="wrap_content" android:src="@drawable/mteam"></ImageButton>
+                </LinearLayout>
+            </HorizontalScrollView>
+                    <Button android:id="@+id/start_game" android:layout_height="wrap_content" android:text="@string/start_game_button_text" android:layout_gravity="bottom" android:layout_width="match_parent" android:layout_centerInParent="true"></Button>
+            
+        </LinearLayout>
+    
+    
+    </RelativeLayout>
     
 </LinearLayout>
