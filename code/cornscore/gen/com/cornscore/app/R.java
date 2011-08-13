@@ -26,10 +26,15 @@ public final class R {
         public static final int pteam=0x7f02000c;
         public static final int select=0x7f02000d;
         public static final int steam=0x7f02000e;
-        public static final int wteam=0x7f02000f;
+        public static final int teamholder=0x7f02000f;
+        public static final int wteam=0x7f020010;
     }
     public static final class id {
-        public static final int frameLayout1=0x7f060021;
+        public static final int awayTeamLayout=0x7f060024;
+        public static final int awayTeamText=0x7f060025;
+        public static final int frameLayout1=0x7f060028;
+        public static final int homeTeamLayout=0x7f060021;
+        public static final int homeTeamText=0x7f060022;
         public static final int horizontalScrollView1=0x7f060003;
         public static final int horizontalScrollView2=0x7f060012;
         public static final int i2team_away=0x7f06001b;
@@ -38,7 +43,7 @@ public final class R {
         public static final int i3team_home=0x7f06000d;
         public static final int iteam_away=0x7f06001d;
         public static final int iteam_home=0x7f06000e;
-        public static final int launch_button=0x7f060022;
+        public static final int launch_button=0x7f060029;
         public static final int linearLayout1=0x7f060001;
         public static final int linearLayout2=0x7f060004;
         public static final int linearLayout3=0x7f060013;
@@ -57,9 +62,12 @@ public final class R {
         public static final int pteam_away=0x7f060016;
         public static final int pteam_home=0x7f060007;
         public static final int relativeLayout1=0x7f060000;
-        public static final int start_game=0x7f060020;
+        public static final int selectedAwayTeam=0x7f060026;
+        public static final int selectedHomeTeam=0x7f060023;
+        public static final int start_game=0x7f060027;
         public static final int steam_away=0x7f060015;
         public static final int steam_home=0x7f060006;
+        public static final int teamSelectedLayout=0x7f060020;
         public static final int textView1=0x7f060002;
         public static final int textView2=0x7f060011;
         public static final int wteam_away=0x7f060014;

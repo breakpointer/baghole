@@ -6,7 +6,7 @@
   android:layout_height="match_parent" android:weightSum="1">
     <FrameLayout android:layout_width="match_parent" android:id="@+id/frameLayout1" android:layout_height="match_parent" android:background="@drawable/cornhole600x600">
         <Button android:id="@+id/launch_button" android:layout_width="wrap_content" android:text="@string/launch_button_text" android:layout_height="wrap_content" android:layout_gravity="center"></Button>
-        <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:layout_height="wrap_content" android:text="@string/welcome_msg" android:layout_width="wrap_content" android:id="@+id/textView1" android:layout_gravity="top"></TextView>  
+        <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:text="@string/welcome_msg" android:id="@+id/textView1" android:gravity="center" android:layout_gravity="center_horizontal" android:padding="10dip" android:textStyle="bold" android:typeface="serif" android:textSize="30dip" android:layout_height="204dp" android:layout_width="259dp"></TextView>  
     </FrameLayout>
     
 </LinearLayout>
