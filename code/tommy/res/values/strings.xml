@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cornhole</string>   
+    <string name="gameactivity">Play Game</string>
+    <color name="black">#000000</color>
+    <color name="red">#EA1B23</color>
+    <color name="white">#FFFFFF</color>
+    <color name="uillblue">#2F3699</color>   
+    <color name="michminnyell">#FFF200</color>
+    <color name="osugray">#DCDCDC</color>
+    <color name="nupurple">#6F3198</color>
+    <color name="uillorange">#FF7E00</color>
+    <color name="indburg">#990030</color>
+    <color name="msugreen">#22B14C</color>
+    <color name="nebred">#ED1C24</color>    
+    <string name="zero">00</string>
+    <string name="done">Done</string>
+    <string name="one">01</string>
+    <string name="blank"></string>
+    <string name="sixspace">      </string>
+</resources>
