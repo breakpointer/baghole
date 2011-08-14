@@ -32,9 +32,11 @@ public final class R {
     public static final class id {
         public static final int awayTeamLayout=0x7f060024;
         public static final int awayTeamText=0x7f060025;
+        public static final int awayTeamsLinearLayout=0x7f060013;
         public static final int frameLayout1=0x7f060028;
         public static final int homeTeamLayout=0x7f060021;
         public static final int homeTeamText=0x7f060022;
+        public static final int homeTeamsLinearLayout=0x7f060004;
         public static final int horizontalScrollView1=0x7f060003;
         public static final int horizontalScrollView2=0x7f060012;
         public static final int i2team_away=0x7f06001b;
@@ -45,8 +47,6 @@ public final class R {
         public static final int iteam_home=0x7f06000e;
         public static final int launch_button=0x7f060029;
         public static final int linearLayout1=0x7f060001;
-        public static final int linearLayout2=0x7f060004;
-        public static final int linearLayout3=0x7f060013;
         public static final int m2team_away=0x7f06001e;
         public static final int m2team_home=0x7f06000f;
         public static final int mteam_away=0x7f06001f;

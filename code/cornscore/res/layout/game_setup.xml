@@ -8,7 +8,7 @@
         <LinearLayout android:orientation="vertical" android:id="@+id/linearLayout1" android:layout_alignParentTop="true" android:layout_alignParentLeft="true" android:layout_height="match_parent" android:layout_width="match_parent" android:weightSum="1">
             <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:text="Pick the home team colors" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/textView1"></TextView>
             <HorizontalScrollView android:id="@+id/horizontalScrollView1" android:padding="5dip" android:layout_width="match_parent" android:layout_height="wrap_content">
-                <LinearLayout android:id="@+id/linearLayout2" android:layout_width="match_parent" android:orientation="horizontal" android:layout_height="wrap_content">
+                <LinearLayout android:id="@+id/homeTeamsLinearLayout" android:layout_width="match_parent" android:orientation="horizontal" android:layout_height="wrap_content">
                     <ImageButton android:layout_width="wrap_content" android:id="@+id/wteam_home" android:layout_height="wrap_content" android:src="@drawable/wteam"></ImageButton>
                     <ImageButton android:layout_width="wrap_content" android:id="@+id/steam_home" android:layout_height="wrap_content" android:src="@drawable/steam"></ImageButton>
                     <ImageButton android:layout_width="wrap_content" android:id="@+id/pteam_home" android:layout_height="wrap_content" android:src="@drawable/pteam"></ImageButton>
@@ -25,7 +25,7 @@
             </HorizontalScrollView>
             <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:text="Pick the away team colors" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/textView2"></TextView>
             <HorizontalScrollView android:id="@+id/horizontalScrollView2" android:padding="5dip" android:layout_width="match_parent" android:layout_height="wrap_content">
-                <LinearLayout android:id="@+id/linearLayout3" android:layout_width="match_parent" android:orientation="horizontal" android:layout_height="wrap_content">
+                <LinearLayout android:id="@+id/awayTeamsLinearLayout" android:layout_width="match_parent" android:orientation="horizontal" android:layout_height="wrap_content">
                 	<ImageButton android:layout_width="wrap_content" android:id="@+id/wteam_away" android:layout_height="wrap_content" android:src="@drawable/wteam"></ImageButton>
                     <ImageButton android:layout_width="wrap_content" android:id="@+id/steam_away" android:layout_height="wrap_content" android:src="@drawable/steam"></ImageButton>
                     <ImageButton android:layout_width="wrap_content" android:id="@+id/pteam_away" android:layout_height="wrap_content" android:src="@drawable/pteam"></ImageButton>
