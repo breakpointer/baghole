@@ -19,8 +19,8 @@ public class PlayGameActivity extends Activity {
         Bundle extras = getIntent().getExtras();
         homeTeamResId = extras.getInt("HOMETEAM_RESID");
         awayTeamResId = extras.getInt("AWAYTEAM_RESID");
-        setSelected(homeTeamResId, R.id.homeTeam);
-        setSelected(awayTeamResId, R.id.awayTeam);
+        setSelected(homeTeamResId, R.id.currentHomeTeam);
+        setSelected(awayTeamResId, R.id.currentAwayTeam);
     }
     
     // Takes the image resource Id and the select element id to actually set 

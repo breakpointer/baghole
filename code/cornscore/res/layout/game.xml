@@ -3,16 +3,16 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@drawable/cornhole600x600"
     >
-<TextView  
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="GameScreen"
-    />
-<LinearLayout android:id="@+id/linearLayout1" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical">
-    <LinearLayout android:id="@+id/linearLayout2" android:layout_height="wrap_content" android:layout_width="match_parent">
-        <ImageView android:layout_height="wrap_content" android:src="@drawable/teamholder" android:id="@+id/homeTeam" android:layout_width="wrap_content"></ImageView>
-        <ImageView android:layout_height="wrap_content" android:src="@drawable/teamholder" android:id="@+id/awayTeam" android:layout_width="wrap_content"></ImageView>
+	<LinearLayout android:layout_height="wrap_content" android:id="@+id/currentTeamLayout" android:layout_width="match_parent">
+      <LinearLayout android:layout_height="match_parent" android:id="@+id/currentHomeTeamLayout" android:orientation="vertical" android:layout_gravity="center" android:layout_weight="1" android:layout_width="0dp">
+          <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Home Team" android:id="@+id/homeTeamText2" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_gravity="center_horizontal"></TextView>
+          <ImageView android:id="@+id/currentHomeTeam" android:layout_height="wrap_content" android:layout_width="wrap_content" android:src="@drawable/teamholder" android:layout_gravity="center_horizontal"></ImageView>
+       </LinearLayout>
+       <LinearLayout android:layout_height="match_parent" android:id="@+id/currentAwayTeamLayout" android:orientation="vertical" android:layout_gravity="right" android:layout_weight="1" android:layout_width="0dp">
+          <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Away Team" android:id="@+id/awayTeamText2" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_gravity="center_horizontal"></TextView>
+          <ImageView android:id="@+id/currentAwayTeam" android:layout_height="wrap_content" android:layout_width="wrap_content" android:src="@drawable/teamholder" android:layout_gravity="center_horizontal"></ImageView>
+       </LinearLayout>
     </LinearLayout>
-</LinearLayout>
 </LinearLayout>
