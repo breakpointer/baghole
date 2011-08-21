@@ -1,24 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@drawable/cornhole600x600"
-    >
-	<LinearLayout android:layout_height="wrap_content" android:id="@+id/currentTeamLayout" android:layout_width="match_parent">
-      <LinearLayout android:layout_height="match_parent" android:id="@+id/currentHomeTeamLayout" android:orientation="vertical" android:layout_gravity="center" android:layout_weight="1" android:layout_width="0dp">
-          <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Home Team" android:id="@+id/homeTeamText2" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_gravity="center_horizontal"></TextView>
-          <LinearLayout android:id="@+id/linearLayout1" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_gravity="center_horizontal">
-            <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:id="@+id/homeTeamScoreText" android:layout_height="wrap_content" android:text="0" android:layout_gravity="center_vertical" android:textSize="60dp"></TextView>
-          	<ImageView android:id="@+id/currentHomeTeam" android:layout_height="wrap_content" android:layout_width="wrap_content" android:src="@drawable/teamholder" android:layout_gravity="right"></ImageView>
-          </LinearLayout>
-       </LinearLayout>
-       <LinearLayout android:layout_height="match_parent" android:id="@+id/currentAwayTeamLayout" android:orientation="vertical" android:layout_gravity="right" android:layout_weight="1" android:layout_width="0dp">
-          <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Away Team" android:id="@+id/awayTeamText2" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_gravity="center_horizontal"></TextView>
-          <LinearLayout android:id="@+id/linearLayout1" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_gravity="center_horizontal">
-            <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:id="@+id/awayTeamScoreText" android:layout_height="wrap_content" android:text="0" android:layout_gravity="center_vertical" android:textSize="60dp"></TextView>
-          	<ImageView android:id="@+id/currentAwayTeam" android:layout_height="wrap_content" android:layout_width="wrap_content" android:src="@drawable/teamholder" android:layout_gravity="center_horizontal"></ImageView>
-       	  </LinearLayout>
-       </LinearLayout>
-    </LinearLayout>
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@drawable/cornhole600x600" android:orientation="vertical">
+
+
+	<LinearLayout android:layout_height="wrap_content"
+		android:id="@+id/currentTeamLayout" android:layout_width="match_parent">
+		<LinearLayout android:layout_height="match_parent"
+			android:id="@+id/currentHomeTeamLayout" android:orientation="vertical"
+			android:layout_gravity="center" android:layout_weight="1"
+			android:layout_width="0dp">
+			<TextView android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:text="Home Team"
+				android:id="@+id/homeTeamText2" android:textAppearance="?android:attr/textAppearanceMedium"
+				android:layout_gravity="center_horizontal"></TextView>
+			<LinearLayout android:id="@+id/linearLayout1"
+				android:layout_height="wrap_content" android:layout_width="wrap_content"
+				android:layout_gravity="center_horizontal">
+				<TextView android:textAppearance="?android:attr/textAppearanceLarge"
+					android:layout_width="wrap_content" android:id="@+id/homeTeamScoreText"
+					android:layout_height="wrap_content" android:text="0"
+					android:layout_gravity="center_vertical" android:textSize="60dp"></TextView>
+				<ImageView android:id="@+id/currentHomeTeam"
+					android:layout_height="wrap_content" android:layout_width="wrap_content"
+					android:src="@drawable/teamholder" android:layout_gravity="right"></ImageView>
+			</LinearLayout>
+		</LinearLayout>
+		<LinearLayout android:layout_height="match_parent"
+			android:id="@+id/currentAwayTeamLayout" android:orientation="vertical"
+			android:layout_gravity="right" android:layout_weight="1"
+			android:layout_width="0dp">
+			<TextView android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:text="Away Team"
+				android:id="@+id/awayTeamText2" android:textAppearance="?android:attr/textAppearanceMedium"
+				android:layout_gravity="center_horizontal"></TextView>
+			<LinearLayout android:id="@+id/linearLayout1"
+				android:layout_height="wrap_content" android:layout_width="wrap_content"
+				android:layout_gravity="center_horizontal">
+				<TextView android:textAppearance="?android:attr/textAppearanceLarge"
+					android:layout_width="wrap_content" android:id="@+id/awayTeamScoreText"
+					android:layout_height="wrap_content" android:text="0"
+					android:layout_gravity="center_vertical" android:textSize="60dp"></TextView>
+				<ImageView android:id="@+id/currentAwayTeam"
+					android:layout_height="wrap_content" android:layout_width="wrap_content"
+					android:src="@drawable/teamholder" android:layout_gravity="center_horizontal"></ImageView>
+			</LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
+	<TextView android:id="@+id/currentInningText"
+		android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_height="wrap_content" android:text="Inning 1"
+		android:layout_gravity="center_horizontal" android:layout_margin="5dip"></TextView>
+	<LinearLayout android:id="@+id/gameAreaLayout"
+		android:baselineAligned="false" android:layout_width="match_parent" android:layout_gravity="center_horizontal" android:layout_height="wrap_content">
+		<FrameLayout android:layout_height="match_parent"
+			android:layout_width="50dp" android:id="@+id/homeBagsFrame"
+			android:background="#ffffff" android:layout_gravity="left" android:layout_marginRight="5dip">
+			<ImageButton android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:src="@drawable/icon"
+				android:id="@+id/imageButton1"></ImageButton>
+			<ImageButton android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:src="@drawable/icon"
+				android:id="@+id/imageButton2"></ImageButton>
+			<ImageButton android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:src="@drawable/icon"
+				android:id="@+id/imageButton3"></ImageButton>
+			<ImageButton android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:src="@drawable/icon"
+				android:id="@+id/imageButton4"></ImageButton>
+		</FrameLayout>
+		<FrameLayout android:layout_height="match_parent"
+			android:layout_width="wrap_content" android:id="@+id/gameBoardFrame"
+			android:background="@drawable/gameboard_white" android:layout_gravity="center_horizontal">
+
+		</FrameLayout>
+		<FrameLayout android:layout_height="match_parent" android:layout_gravity="right"
+		    android:layout_width="50dp" android:id="@+id/awayBagsFrame"
+			android:background="#ffffff" android:layout_marginLeft="5dip" >
+			<ImageButton android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:src="@drawable/icon"
+				android:id="@+id/imageButton5"></ImageButton>
+			<ImageButton android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:src="@drawable/icon"
+				android:id="@+id/imageButton6"></ImageButton>
+			<ImageButton android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:src="@drawable/icon"
+				android:id="@+id/imageButton7"></ImageButton>
+			<ImageButton android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:src="@drawable/icon"
+				android:id="@+id/imageButton8"></ImageButton>
+		</FrameLayout>
+	</LinearLayout>
 </LinearLayout>
