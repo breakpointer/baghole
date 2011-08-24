@@ -45,7 +45,7 @@ public final class R {
         public static final int awayPointsReset=0x7f060027;
         public static final int awayScoringLayout=0x7f060023;
         public static final int awayTeamLayout=0x7f06004c;
-        public static final int awayTeamScoreText=0x7f06000a;
+        public static final int awayTeamScore=0x7f06000a;
         public static final int awayTeamText=0x7f06004d;
         public static final int awayTeamText2=0x7f060009;
         public static final int awayTeamsLinearLayout=0x7f06003b;
@@ -70,7 +70,7 @@ public final class R {
         public static final int homePointsReset=0x7f06001a;
         public static final int homeScoringLayout=0x7f060016;
         public static final int homeTeamLayout=0x7f060049;
-        public static final int homeTeamScoreText=0x7f060006;
+        public static final int homeTeamScore=0x7f060006;
         public static final int homeTeamText=0x7f06004a;
         public static final int homeTeamText2=0x7f060004;
         public static final int homeTeamsLinearLayout=0x7f06002c;

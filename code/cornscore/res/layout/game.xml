@@ -18,7 +18,7 @@
 				android:layout_height="wrap_content" android:layout_width="wrap_content"
 				android:layout_gravity="center_horizontal">
 				<TextView android:textAppearance="?android:attr/textAppearanceLarge"
-					android:layout_width="wrap_content" android:id="@+id/homeTeamScoreText"
+					android:layout_width="wrap_content" android:id="@+id/homeTeamScore"
 					android:layout_height="wrap_content" android:text="0"
 					android:layout_gravity="center_vertical" android:textSize="60dp"></TextView>
 				<ImageView android:id="@+id/currentHomeTeam"
@@ -38,7 +38,7 @@
 				android:layout_height="wrap_content" android:layout_width="wrap_content"
 				android:layout_gravity="center_horizontal">
 				<TextView android:textAppearance="?android:attr/textAppearanceLarge"
-					android:layout_width="wrap_content" android:id="@+id/awayTeamScoreText"
+					android:layout_width="wrap_content" android:id="@+id/awayTeamScore"
 					android:layout_height="wrap_content" android:text="0"
 					android:layout_gravity="center_vertical" android:textSize="60dp"></TextView>
 				<ImageView android:id="@+id/currentAwayTeam"
@@ -72,7 +72,7 @@
 		<LinearLayout android:id="@+id/awayBagsLayout" android:background="#66333333"
 		android:baselineAligned="false" android:layout_height="wrap_content" android:layout_gravity="center" android:layout_width="wrap_content">
 		<LinearLayout android:id="@+id/linearLayout2" android:layout_height="match_parent" android:layout_width="wrap_content" android:padding="2dip" android:layout_margin="5dip">
-			<TextView android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:id="@+id/awayBagText" android:layout_height="wrap_content" android:text="Home Bags" android:layout_marginRight="5dip"></TextView>
+			<TextView android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:id="@+id/awayBagText" android:layout_height="wrap_content" android:text="Away Bags" android:layout_marginRight="5dip"></TextView>
 			<TextView android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:id="@+id/awayBag1" android:layout_height="wrap_content" android:text="X" android:padding="5dip" android:singleLine="true" android:background="#3333ff" android:layout_margin="2dip"></TextView>
 			<TextView android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:id="@+id/awayBag2" android:layout_height="wrap_content" android:text="X" android:padding="5dip" android:singleLine="true" android:background="#3333ff" android:layout_margin="2dip"></TextView>
 			<TextView android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:id="@+id/awayBag3" android:layout_height="wrap_content" android:text="X" android:padding="5dip" android:singleLine="true" android:background="#3333ff" android:layout_margin="2dip"></TextView>
