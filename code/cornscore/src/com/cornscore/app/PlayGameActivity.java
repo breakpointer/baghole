@@ -17,6 +17,8 @@ public class PlayGameActivity extends Activity {
 	public int awayTotalScore;
 	public int homeRoundScore;
 	public int awayRoundScore;
+	public int homeTempScore;
+	public int awayTempScore;
 	public int currentRound;
 	public int currentHomeBag;
 	public int currentAwayBag;
@@ -110,6 +112,7 @@ public class PlayGameActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
+				setTextViewValue(R.id.currentInningText, 0, "Enter New Score ");
 				resetHomeBags();
 				enableHomeScoring();
 			}
@@ -121,6 +124,7 @@ public class PlayGameActivity extends Activity {
 			public void onClick(View v) {
 				resetAwayBags();
 				enableAwayScoring();
+				setTextViewValue(R.id.currentInningText,0 ,"Enter New Score ");
 			}
 		});
         
@@ -135,7 +139,9 @@ public class PlayGameActivity extends Activity {
 		});
     }
     
-    public void goToNextRound(){
+    public void goToNextRound(){   	
+    	
+    	calculateRoundScore();
     	homeRoundScore = 0;
     	awayRoundScore = 0;
     	currentRound ++;
@@ -244,20 +250,82 @@ public class PlayGameActivity extends Activity {
     
     private void calculateWinner(){
     	int delta = 0;
+    	homeTempScore = homeTotalScore;
+    	awayTempScore = awayTotalScore;
+    	
+    	if (homeRoundScore > awayRoundScore){
+    		delta = homeRoundScore - awayRoundScore;
+    		homeTempScore = homeTotalScore + delta;
+    		setTextViewValue(R.id.currentInningText, delta, "Home team by ");
+    		
+    		//Over 21
+    		if (homeTempScore > 21){ 
+    			setTextViewValue(R.id.currentInningText, 16, "Over!! Back to ");
+    		}
+    		//Win
+    		if (homeTempScore == 21)
+    			setTextViewValue(R.id.currentInningText, 21, "Home WINS!!! ");
+        	
+    	}else if (awayRoundScore > homeRoundScore){
+    		delta = awayRoundScore - homeRoundScore;
+    		awayTempScore = awayTotalScore + delta;
+    		setTextViewValue(R.id.currentInningText, delta, "Away team by ");
+    		//Over 21
+    		if (awayTempScore > 21){
+    			setTextViewValue(R.id.currentInningText, 16, "Over!! Back to ");
+    		}
+    			//Win
+    		if (awayTempScore == 21)
+    			setTextViewValue(R.id.currentInningText, 21, "Away WINS!!! ");
+        	
+    	}else{
+    		setTextViewValue(R.id.currentInningText, 0, "A Tie! You each get ");
+    	}
+    	setTextViewValue(R.id.homeTeamScore, homeTempScore);
+    	setTextViewValue(R.id.awayTeamScore, awayTempScore);
+    }
+    
+    //if end round is pressed then scores are added
+    private void calculateRoundScore(){
+    	int delta = 0;
     	if (homeRoundScore > awayRoundScore){
     		delta = homeRoundScore - awayRoundScore;
     		homeTotalScore = homeTotalScore + delta;
-        	setTextViewValue(R.id.currentInningText, delta, "Home team by ");
+    		setTextViewValue(R.id.currentInningText, delta, "Home team by ");
+    		
+    		//Over 21
+    		if (homeTotalScore > 21){ 
+    			homeTotalScore = 16;
+    			setTextViewValue(R.id.currentInningText, 16, "Over!! Back to ");
+    		}
+    		//Win
+    		if (homeTotalScore == 21)
+    			setTextViewValue(R.id.currentInningText, 21, "Home WINS!!! ");
+        	
     	}else if (awayRoundScore > homeRoundScore){
     		delta = awayRoundScore - homeRoundScore;
     		awayTotalScore = awayTotalScore + delta;
-        	setTextViewValue(R.id.currentInningText, delta, "Away team by ");
+    		setTextViewValue(R.id.currentInningText, delta, "Away team by ");
+    		//Over 21
+    		if (awayTotalScore > 21){
+    			awayTotalScore = 16;
+    			setTextViewValue(R.id.currentInningText, 16, "Over!! Back to ");
+    		}
+    			//Win
+    		if (awayTotalScore == 21)
+    			setTextViewValue(R.id.currentInningText, 21, "Away WINS!!! ");
+        	
     	}else{
     		setTextViewValue(R.id.currentInningText, 0, "A Tie! You each get ");
     	}
     	setTextViewValue(R.id.homeTeamScore, homeTotalScore);
     	setTextViewValue(R.id.awayTeamScore, awayTotalScore);
+    
+    	
+    	
     }
+    
+    
     
     // Calculates the round score based on the int in the bag score array
     private void updateHomeScore(){
