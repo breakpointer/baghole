@@ -49,8 +49,8 @@
 	</LinearLayout>
 	<TextView android:id="@+id/currentInningText"
 		android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium"
-		android:layout_height="wrap_content" android:text="Round 1"
-		android:layout_gravity="center_horizontal" android:layout_margin="5dip"></TextView>
+		android:layout_height="wrap_content" android:text="Round 1" android:textSize="30dip"
+		android:layout_gravity="center_horizontal" android:layout_margin="15dip"></TextView>
 	<LinearLayout android:id="@+id/homeBagsLayout" android:background="#66333333"
 		android:baselineAligned="false" android:layout_height="wrap_content" android:layout_gravity="center" android:layout_width="wrap_content">
 		<LinearLayout android:id="@+id/linearLayout2" android:layout_height="match_parent" android:layout_width="wrap_content" android:padding="3dip" android:layout_margin="5dip">
@@ -87,4 +87,5 @@
 		<Button android:text="+3" android:id="@+id/awayPoints3" android:layout_width="60dip" android:layout_height="60dip"></Button>
 		<Button android:text="Reset" android:id="@+id/awayPointsReset" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
 	</LinearLayout>
+	<Button android:layout_gravity="center_horizontal" android:id="@+id/nextRoundButton" android:text="Next Round!" android:layout_width="98dp" android:layout_height="wrap_content" android:layout_marginTop="10dip"></Button>
 </LinearLayout>
