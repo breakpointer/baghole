@@ -18,6 +18,8 @@ public class PlayGameActivity extends Activity {
 	public int awayTotalScore;
 	public int homeRoundScore;
 	public int awayRoundScore;
+	public int homeTempScore;
+	public int awayTempScore;
 	public int currentRound;
 	public int currentHomeBag;
 	public int currentAwayBag;
@@ -37,6 +39,7 @@ public class PlayGameActivity extends Activity {
         
         // some data inits
         homeTotalScore = awayTotalScore = homeRoundScore = awayRoundScore = currentHomeBag = currentAwayBag = 0; 
+        homeTempScore = awayTempScore = 0;
         currentRound = 1;
         
         // setting some values from the init'd data
@@ -140,18 +143,36 @@ public class PlayGameActivity extends Activity {
     	homeRoundScore = 0;
     	awayRoundScore = 0;
     	currentRound ++;
+    	
     	resetHomeBags();
     	resetAwayBags();
     	enableHomeScoring();
     	enableAwayScoring();
     	setRound();
     	disableNextRound();
+    	
+    	setRoundTotals();
+    	setScoreDisplay(homeTotalScore, awayTotalScore);
     }
     
+	// actually setting teh scores from the previous round
+	public void setRoundTotals(){
+		homeTotalScore = homeTempScore;
+		awayTotalScore = awayTempScore;
+	}
+	
+    // Updates the team scores
+    public void setScoreDisplay(int home, int away){
+    	setTextViewValue(R.id.homeTeamScore, home);
+    	setTextViewValue(R.id.awayTeamScore, away);
+    }
+    
+    // sets the round text and number
     public void setRound(){
     	setTextViewValue(R.id.currentInningText, currentRound, "Round ");
     }
     
+    // Resets the bag points for the round 
     public void resetHomeBags(){
     	currentHomeBag = 0;
     	homeBags[0] = homeBags[1] = homeBags[2] = homeBags[3] = -1;
@@ -165,7 +186,6 @@ public class PlayGameActivity extends Activity {
     	setAwayBags();
     	updateAwayScore();
     }
-    
     
     // Ads points to the next bag in line
     private void assignHomePoints(int pointVal){
@@ -196,8 +216,6 @@ public class PlayGameActivity extends Activity {
     	}
     } 
     
-
-    
     // Determines if all bags have been thrown
     private void checkEndRound(){
     	if ((currentHomeBag == 4) && (currentAwayBag == 4)){
@@ -208,13 +226,16 @@ public class PlayGameActivity extends Activity {
     
     private void calculateWinner(){
     	int delta = 0;
+    	homeTempScore = homeTotalScore;
+    	awayTempScore = awayTotalScore; 
+    	
     	if (homeRoundScore > awayRoundScore){
     		delta = homeRoundScore - awayRoundScore;
-    		homeTotalScore = homeTotalScore + delta;
-    		if (homeTotalScore > 21){
+    		homeTempScore = homeTempScore + delta;
+    		if (homeTempScore > 21){
     			setTextViewValue(R.id.currentInningText, 16, "Over!! Back to ");
-    			homeTotalScore = 16;
-    		}else if (homeTotalScore == 21){
+    			homeTempScore = 16;
+    		}else if (homeTempScore == 21){
     			setTextViewValue(R.id.currentInningText, 21, "Home WINS!!! ");
     			endGame();
     		}else{
@@ -222,11 +243,11 @@ public class PlayGameActivity extends Activity {
     		}
     	}else if (awayRoundScore > homeRoundScore){
     		delta = awayRoundScore - homeRoundScore;
-    		awayTotalScore = awayTotalScore + delta;
-    		if (awayTotalScore > 21){
+    		awayTempScore = awayTempScore + delta;
+    		if (awayTempScore > 21){
     			setTextViewValue(R.id.currentInningText, 16, "Over!! Back to ");
-    			awayTotalScore = 16;
-    		}else if (awayTotalScore == 21){
+    			awayTempScore = 16;
+    		}else if (awayTempScore == 21){
     			setTextViewValue(R.id.currentInningText, 21, "Away WINS!!! ");
     			endGame();
     		}else {
@@ -235,12 +256,15 @@ public class PlayGameActivity extends Activity {
     	}else{
     		setTextViewValue(R.id.currentInningText, 0, "A Tie! You each get ");
     	}
-    	setTextViewValue(R.id.homeTeamScore, homeTotalScore);
-    	setTextViewValue(R.id.awayTeamScore, awayTotalScore);
+
     }
     
     // Changes the text of the next round button and adds a new listener to trigger the game over screen
     private void endGame(){
+    	// Update scores
+    	setRoundTotals();
+    	setScoreDisplay(homeTotalScore, awayTotalScore);
+    	
     	Button nextRound = (Button) findViewById(R.id.nextRoundButton);
     	// This could be trouble with two click listeners... not sure if the override each other.
     	nextRound.setText("Game over!");
