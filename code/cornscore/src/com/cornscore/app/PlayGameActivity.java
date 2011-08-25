@@ -261,9 +261,7 @@ public class PlayGameActivity extends Activity {
     
     // Changes the text of the next round button and adds a new listener to trigger the game over screen
     private void endGame(){
-    	// Update scores
-    	setRoundTotals();
-    	setScoreDisplay(homeTotalScore, awayTotalScore);
+
     	
     	Button nextRound = (Button) findViewById(R.id.nextRoundButton);
     	// This could be trouble with two click listeners... not sure if the override each other.
@@ -272,7 +270,16 @@ public class PlayGameActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
+		    	// Update scores
+		    	setRoundTotals();
+				
 				Intent endGameScreen = new Intent(PlayGameActivity.this, GameOverActivity.class);
+		    	// Passing in the resource ids for the teams so we can display their graphics on the next activity.
+				endGameScreen.putExtra("HOMETEAM_RESID", homeTeamResId); 
+				endGameScreen.putExtra("AWAYTEAM_RESID", awayTeamResId);
+		    	// Passing in the team final scores so we can display their graphics on the next activity.
+				endGameScreen.putExtra("HOMETEAM_SCORE", homeTotalScore); 
+				endGameScreen.putExtra("AWAYTEAM_SCORE", awayTotalScore);
 				startActivity(endGameScreen);
 			}
 		});
