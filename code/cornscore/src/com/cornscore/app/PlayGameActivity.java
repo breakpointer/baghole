@@ -1,6 +1,7 @@
 package com.cornscore.app;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -195,6 +196,87 @@ public class PlayGameActivity extends Activity {
     	}
     } 
     
+
+    
+    // Determines if all bags have been thrown
+    private void checkEndRound(){
+    	if ((currentHomeBag == 4) && (currentAwayBag == 4)){
+    		calculateWinner();
+    		enableNextRound();
+    	}
+    }
+    
+    private void calculateWinner(){
+    	int delta = 0;
+    	if (homeRoundScore > awayRoundScore){
+    		delta = homeRoundScore - awayRoundScore;
+    		homeTotalScore = homeTotalScore + delta;
+    		if (homeTotalScore > 21){
+    			setTextViewValue(R.id.currentInningText, 16, "Over!! Back to ");
+    			homeTotalScore = 16;
+    		}else if (homeTotalScore == 21){
+    			setTextViewValue(R.id.currentInningText, 21, "Home WINS!!! ");
+    			endGame();
+    		}else{
+    			setTextViewValue(R.id.currentInningText, delta, "Home team by ");
+    		}
+    	}else if (awayRoundScore > homeRoundScore){
+    		delta = awayRoundScore - homeRoundScore;
+    		awayTotalScore = awayTotalScore + delta;
+    		if (awayTotalScore > 21){
+    			setTextViewValue(R.id.currentInningText, 16, "Over!! Back to ");
+    			awayTotalScore = 16;
+    		}else if (awayTotalScore == 21){
+    			setTextViewValue(R.id.currentInningText, 21, "Away WINS!!! ");
+    			endGame();
+    		}else {
+    			setTextViewValue(R.id.currentInningText, delta, "Away team by ");
+    		}
+    	}else{
+    		setTextViewValue(R.id.currentInningText, 0, "A Tie! You each get ");
+    	}
+    	setTextViewValue(R.id.homeTeamScore, homeTotalScore);
+    	setTextViewValue(R.id.awayTeamScore, awayTotalScore);
+    }
+    
+    // Changes the text of the next round button and adds a new listener to trigger the game over screen
+    private void endGame(){
+    	Button nextRound = (Button) findViewById(R.id.nextRoundButton);
+    	// This could be trouble with two click listeners... not sure if the override each other.
+    	nextRound.setText("Game over!");
+    	nextRound.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent endGameScreen = new Intent(PlayGameActivity.this, GameOverActivity.class);
+				startActivity(endGameScreen);
+			}
+		});
+    }
+    
+    // Calculates the round score based on the int in the bag score array
+    private void updateHomeScore(){
+    	int sum = 0;
+    	for(int x=0; x < 4; x++){
+    		if(homeBags[x] > 0){
+    			sum = sum + homeBags[x];
+    		}
+    	}
+    	homeRoundScore = sum;
+    	setTextViewValue(R.id.homeBagScore, sum);
+    }
+    
+    private void updateAwayScore(){
+    	int sum = 0;
+    	for(int x=0; x < 4; x++){
+    		if(awayBags[x] > 0){
+    			sum = sum + awayBags[x];
+    		}
+    	}
+    	awayRoundScore = sum;
+    	setTextViewValue(R.id.awayBagScore, sum);
+    }
+    
     // Turns off the buttons to score
     private void disableHomeScoring(){
     	Button homeZero = (Button) findViewById(R.id.homePoints0);
@@ -231,55 +313,6 @@ public class PlayGameActivity extends Activity {
     	awayZero.setEnabled(true);
     	awayOne.setEnabled(true);
     	awayThree.setEnabled(true);
-    }
- 
-    
-    // Determines if all bags have been thrown and i
-    private void checkEndRound(){
-    	if ((currentHomeBag == 4) && (currentAwayBag == 4)){
-    		calculateWinner();
-    		enableNextRound();
-    	}
-    }
-    
-    private void calculateWinner(){
-    	int delta = 0;
-    	if (homeRoundScore > awayRoundScore){
-    		delta = homeRoundScore - awayRoundScore;
-    		homeTotalScore = homeTotalScore + delta;
-        	setTextViewValue(R.id.currentInningText, delta, "Home team by ");
-    	}else if (awayRoundScore > homeRoundScore){
-    		delta = awayRoundScore - homeRoundScore;
-    		awayTotalScore = awayTotalScore + delta;
-        	setTextViewValue(R.id.currentInningText, delta, "Away team by ");
-    	}else{
-    		setTextViewValue(R.id.currentInningText, 0, "A Tie! You each get ");
-    	}
-    	setTextViewValue(R.id.homeTeamScore, homeTotalScore);
-    	setTextViewValue(R.id.awayTeamScore, awayTotalScore);
-    }
-    
-    // Calculates the round score based on the int in the bag score array
-    private void updateHomeScore(){
-    	int sum = 0;
-    	for(int x=0; x < 4; x++){
-    		if(homeBags[x] > 0){
-    			sum = sum + homeBags[x];
-    		}
-    	}
-    	homeRoundScore = sum;
-    	setTextViewValue(R.id.homeBagScore, sum);
-    }
-    
-    private void updateAwayScore(){
-    	int sum = 0;
-    	for(int x=0; x < 4; x++){
-    		if(awayBags[x] > 0){
-    			sum = sum + awayBags[x];
-    		}
-    	}
-    	awayRoundScore = sum;
-    	setTextViewValue(R.id.awayBagScore, sum);
     }
     
     // Takes the image resource Id and the select element id to actually set 

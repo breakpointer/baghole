@@ -67,7 +67,7 @@
 		<Button android:text="0" android:id="@+id/homePoints0" android:layout_width="60dip" android:layout_height="60dip"></Button>
 		<Button android:text="+1" android:id="@+id/homePoints1" android:layout_width="60dip" android:layout_height="60dip"></Button>
 		<Button android:text="+3" android:id="@+id/homePoints3" android:layout_width="60dip" android:layout_height="60dip"></Button>
-		<Button android:text="Reset" android:id="@+id/homePointsReset" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+		<Button android:text="Reset" android:id="@+id/homePointsReset" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dip"></Button>
 	</LinearLayout>
 		<LinearLayout android:id="@+id/awayBagsLayout" android:background="#66333333"
 		android:baselineAligned="false" android:layout_height="wrap_content" android:layout_gravity="center" android:layout_width="wrap_content">
@@ -85,7 +85,7 @@
 		<Button android:text="0" android:id="@+id/awayPoints0" android:layout_width="60dip" android:layout_height="60dip"></Button>
 		<Button android:text="+1" android:id="@+id/awayPoints1" android:layout_width="60dip" android:layout_height="60dip"></Button>
 		<Button android:text="+3" android:id="@+id/awayPoints3" android:layout_width="60dip" android:layout_height="60dip"></Button>
-		<Button android:text="Reset" android:id="@+id/awayPointsReset" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+		<Button android:text="Reset" android:id="@+id/awayPointsReset" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dip"></Button>
 	</LinearLayout>
 	<Button android:layout_gravity="center_horizontal" android:id="@+id/nextRoundButton" android:text="Next Round!" android:layout_width="98dp" android:layout_height="wrap_content" android:layout_marginTop="10dip"></Button>
 </LinearLayout>
