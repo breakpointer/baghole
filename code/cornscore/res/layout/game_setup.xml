@@ -11,8 +11,8 @@
                 <LinearLayout android:id="@+id/homeTeamsLinearLayout" android:layout_width="match_parent" android:orientation="horizontal" android:layout_height="wrap_content">
                     <ImageButton android:layout_width="wrap_content" android:id="@+id/wteamHome" android:layout_height="wrap_content" android:src="@drawable/wteam"></ImageButton>
                     <ImageButton android:layout_width="wrap_content" android:id="@+id/steamHome" android:layout_height="wrap_content" android:src="@drawable/steam"></ImageButton>
-                    <ImageButton android:layout_width="wrap_content" android:id="@+id/pteamHome" android:layout_height="wrap_content" android:src="@drawable/pteam"></ImageButton>
-                    <ImageButton android:layout_width="wrap_content" android:id="@+id/p2teamHome" android:layout_height="wrap_content" android:src="@drawable/p2team"></ImageButton>
+                    <ImageButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/pteamHome" android:src="@drawable/pteam"></ImageButton>
+                    <ImageButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/p2teamHome" android:src="@drawable/p2team"></ImageButton>
                     <ImageButton android:layout_width="wrap_content" android:id="@+id/oteamHome" android:layout_height="wrap_content" android:src="@drawable/oteam"></ImageButton>
                     <ImageButton android:layout_width="wrap_content" android:id="@+id/nuteamHome" android:layout_height="wrap_content" android:src="@drawable/nuteam"></ImageButton>
                     <ImageButton android:layout_width="wrap_content" android:id="@+id/nteamHome" android:layout_height="wrap_content" android:src="@drawable/nteam"></ImageButton>

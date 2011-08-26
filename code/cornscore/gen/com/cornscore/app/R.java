@@ -14,21 +14,22 @@ public final class R {
         public static final int cornhole600x600=0x7f020000;
         public static final int gameboard=0x7f020001;
         public static final int gameboard_white=0x7f020002;
-        public static final int i2team=0x7f020003;
-        public static final int i3team=0x7f020004;
-        public static final int icon=0x7f020005;
-        public static final int iteam=0x7f020006;
-        public static final int m2team=0x7f020007;
-        public static final int mteam=0x7f020008;
-        public static final int nteam=0x7f020009;
-        public static final int nuteam=0x7f02000a;
-        public static final int oteam=0x7f02000b;
-        public static final int p2team=0x7f02000c;
-        public static final int pteam=0x7f02000d;
-        public static final int select=0x7f02000e;
-        public static final int steam=0x7f02000f;
-        public static final int teamholder=0x7f020010;
-        public static final int wteam=0x7f020011;
+        public static final int gameover600x600=0x7f020003;
+        public static final int i2team=0x7f020004;
+        public static final int i3team=0x7f020005;
+        public static final int icon=0x7f020006;
+        public static final int iteam=0x7f020007;
+        public static final int m2team=0x7f020008;
+        public static final int mteam=0x7f020009;
+        public static final int nteam=0x7f02000a;
+        public static final int nuteam=0x7f02000b;
+        public static final int oteam=0x7f02000c;
+        public static final int p2team=0x7f02000d;
+        public static final int pteam=0x7f02000e;
+        public static final int select=0x7f02000f;
+        public static final int steam=0x7f020010;
+        public static final int teamholder=0x7f020011;
+        public static final int wteam=0x7f020012;
     }
     public static final class id {
         public static final int awayBag1=0x7f06001d;
@@ -100,7 +101,7 @@ public final class R {
         public static final int p2teamHome=0x7f060032;
         public static final int pteamAway=0x7f060040;
         public static final int pteamHome=0x7f060031;
-        public static final int relativeLayout1=0x7f06002c;
+        public static final int relativeLayout1=0x7f06002b;
         public static final int selectedAwayTeam=0x7f060050;
         public static final int selectedHomeTeam=0x7f06004d;
         public static final int startGame=0x7f060051;
@@ -109,7 +110,7 @@ public final class R {
         public static final int teamGraphicId=0x7f060000;
         public static final int teamHomeOrAway=0x7f060001;
         public static final int teamSelectedLayout=0x7f06004a;
-        public static final int textView1=0x7f06002b;
+        public static final int textView1=0x7f06002c;
         public static final int textView2=0x7f06003b;
         public static final int wteamAway=0x7f06003e;
         public static final int wteamHome=0x7f06002f;

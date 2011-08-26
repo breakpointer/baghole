@@ -40,7 +40,7 @@
 				<TextView android:textAppearance="?android:attr/textAppearanceLarge"
 					android:layout_width="wrap_content" android:id="@+id/awayTeamScore"
 					android:layout_height="wrap_content" android:text="0"
-					android:layout_gravity="center_vertical" android:textSize="60dp"></TextView>
+					android:layout_gravity="center_vertical" android:textSize="60dp" android:editable="true" android:inputType="number" android:numeric="integer" android:clickable="false"></TextView>
 				<ImageView android:id="@+id/currentAwayTeam"
 					android:layout_height="wrap_content" android:layout_width="wrap_content"
 					android:src="@drawable/teamholder" android:layout_gravity="center_horizontal"></ImageView>
